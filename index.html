@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment-Quiz-App</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="MyQuizApp">
+        <div class="img">
+            <img src="images/quiz.png" alt="Quiz Image">
+        </div>
+        <div class="text1">
+            <h3>Assess Your Knowledge!</h3>
+            <p>An easy-to-use app for interactive quiz dissemination and evaluation. Take your knowledge assessment to new heights!</p>
+            <h3>Are You Ready To Attend The Quiz?</h3>
+        </div>
+        <div class="MyBtn">
+            <button id="startBtn">Start Quiz</button>
+        </div>
+    </div>
+    
+    <div class="RulesBox">
+        <div class="RulesTitle">Some Rules of this Quiz</div>
+        <div class="RulesList">
+            <ol>
+                <li>You can take only <span style="color: #007bff;">15 seconds</span> for each question.</li>
+                <li>Once you select your answer, it can't be undone.</li>
+                <li>You can't select any option once time goes off.</li>
+                <li>You can't exit from the Quiz while you're playing.</li>
+                <li>You'll get points on the basis of your correct answers.</li>
+            </ol>
+        </div>
+        <div class="Buttons">
+            <button class="ExitButton">Exit Quiz</button>
+            <button class="ContinueButton">Continue</button>
+        </div>
+    </div>
+
+    <div class="Questions">
+        <header class="QuestionsHeader">
+            <div class="title">Question Number</div>
+            <div class="TimeCount">
+                <div class="TimeLeft">Time Left</div>
+                <div class="Seconds">15</div>
+            </div>
+            <div class="time_lines"></div>
+        </header>
+        <div class="section">
+            <div class="text">
+                <span id="questionText">Question text will appear here.</span>
+            </div>
+            <div class="MyOptions" id="optionsContainer">
+                <!-- Options will be populated here dynamically -->
+            </div>
+        </div>
+        <footer>
+            <div class="total_que" id="questionCounter">Question X of Y</div>
+            <button class="nextBtn">Next Question</button>
+        </footer>
+    </div>
+    
+    <div class="reslut_box">
+        <div class="ResultImg">
+            <img src="images/winner.svg" alt="Winner Image">
+        </div>
+        <div class="complete_text">You Have Finished This Quiz</div>
+        <div class="score_text">
+            <span>Your Score: <p id="userScore">0</p> Out Of <p id="totalQuestions">0</p></span>
+        </div>
+        <div class="buttons">
+            <button class="restart1" id="restartBtn">Replay</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
